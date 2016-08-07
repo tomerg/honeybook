@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honeybook - Contact App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.min.css">
+  </head>
+  <body ng-app="contactApp">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+              <a href="#" class="navbar-left"><img src="images/honeybook_logo.png"></a>
+          </div>
+    			<form class="navbar-form navbar-right" role="search">
+    			  <div class="input-group">         
+    				<input type="text" class="form-control" placeholder="Search contacts..." id="nav-input" ng-model="name">
+    				<span class="input-group-btn">
+    				  <button class="btn btn-custom" type="button" ng-click="search()">Search</button>
+    				</span>
+    			  </div> 
+    			</form> 
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Start Contact Section -->
+    <article class="container" role="main">
+
+      <div class="row">
+        <h1 class="text-center title-top">Contact List</h1>
+      </div><!-- End row -->
+
+      <div class="row" ng-controller="mainCtrl">
+
+        <div ng-style="loader" class="text-center">
+          <div class="loader text-center"></div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="person in contacts | filter: {name:name}">
+            <div class="card hovercard card-show">
+              <div class="cardheader">
+                  <img src="{{person.profile_image}}" class="img-responsive crop-height scale">
+              </div>
+              <div class="col-xs-12 avatar">
+                  <img alt="" src="{{person.icon}}" class="pull-left">
+              </div>
+              <div class="info">
+                  <div class="title">{{person.name}}</div>
+                  <div class="description">{{person.job}}</div>
+                  <div class="description">{{person.company_name}}</div>
+                  <div class="description card-hidden">{{person.email}}</div>
+                  <div class="description card-hidden">{{person.phone}}</div>
+              </div>
+            </div>
+
+        </div>
+        
+      </div><!-- End row -->
+      
+    </article><!-- End container -->
+
+    <!-- Start Footer -->
+    <footer class="footer container">
+        <p class="text-muted text-center small">Copyright © 2016 HoneyBook Inc. All Rights Reserved.</p>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/mainCtrl.js"></script>
+    <script type="text/javascript" src="js/services/contactService.js"></script>
+    <!-- End Scripts -->
+
+  </body>
+</html>

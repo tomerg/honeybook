@@ -1,0 +1,336 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #F0F0F0;
+  font-family: 'Raleway', sans-serif;
+  min-height: 1000px;
+  margin-bottom: 80px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.navbar-custom {
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border: none;
+  padding: 1em 0;
+}
+
+/* ---- Page Elements ---- */
+
+.title-top {
+  margin: 3em 0 1em 0;
+}
+
+.card {
+  padding-top: 20px;
+  margin: 10px 0 20px 0;
+  background-color: rgba(214, 224, 226, 0.2);
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .card-heading {
+    padding: 0 20px;
+    margin: 0;
+    &.simple {
+      font-size: 20px;
+      font-weight: 300;
+      color: #777;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &.image {
+      img {
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        margin-right: 15px;
+        vertical-align: top;
+        border: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .card-heading-header {
+        display: inline-block;
+        vertical-align: top;
+        h3 {
+          margin: 0;
+          font-size: 14px;
+          line-height: 16px;
+          color: #262626;
+        }
+        span {
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+    }
+  }
+  .card-body {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  .card-media {
+    padding: 0 20px;
+    margin: 0 -14px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .card-actions {
+    min-height: 30px;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 0 0;
+  }
+  .card-comments {
+    padding: 20px;
+    margin: 0;
+    background-color: #f8f8f8;
+    .comments-collapse-toggle {
+      padding: 0;
+      margin: 0 20px 12px 20px;
+      a, span {
+        padding-right: 5px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #999;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.card-comments .media-heading {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card {
+  &.people {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    height: 300px;
+    padding-top: 0;
+    margin-left: 20px;
+    overflow: hidden;
+    vertical-align: top;
+    &:first-child {
+      margin-left: 0;
+    }
+    .card-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 170px;
+      height: 150px;
+      background-color: #ffffff;
+      &.green {
+        background-color: #53a93f;
+      }
+      &.blue {
+        background-color: #427fed;
+      }
+    }
+    .card-info {
+      position: absolute;
+      top: 150px;
+      display: inline-block;
+      width: 100%;
+      height: 101px;
+      overflow: hidden;
+      background: #ffffff;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .title {
+        display: block;
+        margin: 8px 14px 0 14px;
+        overflow: hidden;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 18px;
+        color: #404040;
+      }
+      .description {
+        display: block;
+        margin: 8px 14px 0 14px;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 16px;
+        color: #737373;
+        text-overflow: ellipsis;
+      }
+    }
+    .card-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      padding: 10px 20px;
+      line-height: 29px;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+  &.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ffffff;
+    .cardheader {
+      background-size: 100%;
+    }
+    .avatar {
+      position: relative;
+      top: -40px;
+      margin-bottom: -25px;
+      img {
+        width: 80px;
+        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    .info {
+      padding: 4px 8px 10px;
+      .title {
+        margin-bottom: 8px;
+        font-size: 1.7em;
+        line-height: 1;
+        color: #58BFC7;
+        vertical-align: middle;
+      }
+      .description {
+        overflow: hidden;
+        font-size: 0.8750em;
+        line-height: 20px;
+        color: #737373;
+        text-overflow: ellipsis;
+      }
+    }
+    .bottom {
+      padding: 0 20px;
+      margin-bottom: 17px;
+    }
+  }
+  height: 400px;
+}
+
+.cardheader {
+  height: 220px;
+  overflow: hidden;
+}
+
+.crop-height {
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-show {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.card-hidden {
+  display: none;
+}
+
+.card-show:hover .card-hidden {
+  display: block;
+}
+
+.btn-custom {
+  background-color: #56AEB6;
+}
+
+.form-control:focus {
+  border-color: #56AEB6;
+  box-shadow: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #454545;
+  padding: 20px 0;
+}
+
+.loader {
+  background-image: url('images/oval.svg');
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (max-width: 991px) {
+  .card {
+    height: 520px;
+  }
+  .cardheader {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #nav-input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card, .cardheader {
+    height: auto;
+  }
+  .crop-height {
+    height: auto;
+    width: 100%;
+  }
+  .navbar-header {
+    text-align: center;
+  }
+  .navbar-form {
+    border: none;
+  }
+}
