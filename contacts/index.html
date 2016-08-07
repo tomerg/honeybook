@@ -31,43 +31,36 @@
 
     <!-- Start Contact Section -->
     <article class="container" role="main">
-
       <div class="row">
         <h1 class="text-center title-top">Contact List</h1>
       </div><!-- End row -->
-
       <div class="row" ng-controller="mainCtrl">
-
         <div ng-style="loader" class="text-center">
           <div class="loader text-center"></div>
         </div>
-        
         <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="person in contacts | filter: {name:name}">
             <div class="card hovercard card-show">
               <div class="cardheader">
-                  <img src="{{person.profile_image}}" class="img-responsive crop-height scale">
+                <img src="{{person.profile_image}}" class="crop-height">
               </div>
               <div class="col-xs-12 avatar">
-                  <img alt="" src="{{person.icon}}" class="pull-left">
+                <img alt="" src="{{person.icon}}" class="pull-left">
               </div>
               <div class="info">
-                  <div class="title">{{person.name}}</div>
-                  <div class="description">{{person.job}}</div>
-                  <div class="description">{{person.company_name}}</div>
-                  <div class="description card-hidden">{{person.email}}</div>
-                  <div class="description card-hidden">{{person.phone}}</div>
+                <div class="title">{{person.name}}</div>
+                <div class="description">{{person.job}}</div>
+                <div class="description">{{person.company_name}}</div>
+                <div class="description card-hidden">{{person.email}}</div>
+                <div class="description card-hidden">{{person.phone}}</div>
               </div>
             </div>
-
         </div>
-        
       </div><!-- End row -->
-      
     </article><!-- End container -->
 
     <!-- Start Footer -->
     <footer class="footer container">
-        <p class="text-muted text-center small">Copyright © 2016 HoneyBook Inc. All Rights Reserved.</p>
+      <p class="text-muted text-center small">Copyright © 2016 HoneyBook Inc. All Rights Reserved.</p>
     </footer>
     <!-- End Footer -->
 
